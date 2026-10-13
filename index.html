@@ -13,6 +13,8 @@
             --text-muted: #aaaaaa;
             --tv-badge: #1f4068;
             --vs-bg: #2d2d2d;
+            --instagram-color: #e1306c;
+            --twitter-color: #000000;
         }
 
         * {
@@ -33,22 +35,69 @@
 
         header {
             text-align: center;
-            margin-bottom: 30px;
-            max-width: 500px;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 600px;
         }
 
         .profile-title {
             font-size: 1.8rem;
             font-weight: bold;
             color: var(--text-color);
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
 
         .profile-handle {
-            color: var(--primary-color);
-            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
             text-decoration: none;
-            font-weight: 600;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .profile-handle span {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* BOTÕES DE REDES SOCIAIS OFICIAIS DO TIME */
+        .official-links {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .btn-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: opacity 0.2s ease;
+            flex: 1;
+            max-width: 200px;
+            border: 1px solid #333;
+        }
+
+        .btn-social:hover {
+            opacity: 0.85;
+        }
+
+        .btn-instagram {
+            background-color: var(--instagram-color);
+        }
+
+        .btn-twitter {
+            background-color: var(--twitter-color);
         }
 
         .container {
@@ -179,7 +228,17 @@
 
     <header>
         <div class="profile-title">Acervo Sesi Bauru</div>
-        <a href="https://x.com" target="_blank" class="profile-handle">@acervosesibauru</a>
+        <a href="https://x.com" target="_blank" class="profile-handle">Página de fãs: <span>@acervosesibauru</span></a>
+        
+        <!-- LINKS DOS PERFIS OFICIAIS DO SESI BAURU -->
+        <div class="official-links">
+            <a href="https://instagram.com" target="_blank" class="btn-social btn-instagram">
+                📸 Instagram Oficial
+            </a>
+            <a href="https://x.com" target="_blank" class="btn-social btn-twitter">
+                𝕏 Twitter Oficial
+            </a>
+        </div>
     </header>
 
     <div class="container">
@@ -259,46 +318,3 @@
                 </div>
                 <div class="vs-circle">X</div>
                 <div class="team-box">
-                    <img class="team-logo" src="https://tretis.com.br" alt="Sesi Bauru" onerror="this.src='https://placehold.co'">
-                    <span class="team-name">Sesi Bauru</span>
-                </div>
-            </div>
-            <div class="game-footer">
-                <span>🕒 21h00</span>
-                <span class="venue">📍 Arena Vivo (Belo Horizonte)</span>
-            </div>
-        </div>
-
-        <!-- Jogo 4 -->
-        <div class="game-card">
-            <div class="game-header">
-                <span>02/11 (Segunda)</span>
-                <div class="badges">
-                    <span class="league-badge">Superliga - Rodada 2</span>
-                </div>
-            </div>
-            <div class="game-teams-container">
-                <div class="team-box">
-                    <img class="team-logo" src="https://tretis.com.br" alt="Sesi Bauru" onerror="this.src='https://placehold.co'">
-                    <span class="team-name">Sesi Bauru</span>
-                </div>
-                <div class="vs-circle">X</div>
-                <div class="team-box">
-                    <img class="team-logo" src="https://placehold.co" alt="Praia Clube">
-                    <span class="team-name">Praia Clube</span>
-                </div>
-            </div>
-            <div class="game-footer">
-                <span>🕒 18h30</span>
-                <span class="venue">📍 Arena Paulo Skaf (Bauru)</span>
-            </div>
-        </div>
-
-
-        <!-- BASQUETE MASCULINO -->
-        <div class="section-title">Basquete Masculino</div>
-        
-        <!-- Jogo 5 -->
-        <div class="game-card">
-            <div class="game-header">
-                <span>18/10 (Domingo)</span>
