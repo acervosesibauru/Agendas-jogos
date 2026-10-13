@@ -12,6 +12,7 @@
             --text-color: #ffffff;
             --text-muted: #aaaaaa;
             --tv-badge: #1f4068;
+            --vs-bg: #2d2d2d;
         }
 
         * {
@@ -59,7 +60,7 @@
             font-size: 1.3rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin: 30px 0 15px 0;
+            margin: 35px 0 15px 0;
             border-left: 4px solid var(--primary-color);
             padding-left: 10px;
         }
@@ -67,13 +68,13 @@
         .game-card {
             background-color: var(--card-bg);
             border-radius: 12px;
-            padding: 15px;
+            padding: 18px;
             margin-bottom: 12px;
             border: 1px solid #2d2d2d;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 12px;
         }
 
         .game-header {
@@ -107,19 +108,56 @@
             font-weight: bold;
         }
 
-        .game-teams {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin: 5px 0;
+        /* NOVA ESTRUTURA DOS TIMES E IMAGENS */
+        .game-teams-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding: 5px 0;
         }
 
-        .vs {
-            color: var(--primary-color);
-            font-size: 0.9rem;
-            margin: 0 10px;
+        .team-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            width: 40%;
+            text-align: center;
+        }
+
+        .team-box.home {
+            align-items: center;
+        }
+
+        .team-box.away {
+            align-items: center;
+        }
+
+        .team-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+        }
+
+        .team-name {
+            font-size: 1rem;
+            font-weight: bold;
+            word-wrap: break-word;
+        }
+
+        .vs-circle {
+            background-color: var(--vs-bg);
+            border: 2px solid var(--primary-color);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
 
         .game-footer {
@@ -158,7 +196,7 @@
         <!-- VÔLEI FEMININO -->
         <div class="section-title">Vôlei Feminino</div>
         
-        <!-- Paulista -->
+        <!-- Jogo 1 -->
         <div class="game-card">
             <div class="game-header">
                 <span>HOJE (13/10)</span>
@@ -167,10 +205,18 @@
                     <span class="league-badge">Paulista - Final (Jogo 2)</span>
                 </div>
             </div>
-            <div class="game-teams">
-                <span>Sesi Vôlei Bauru</span>
-                <span class="vs">X</span>
-                <span>Osasco</span>
+            <div class="game-teams-container">
+                <div class="team-box home">
+                    <!-- URL do escudo do Sesi SP -->
+                    <img class="team-logo" src="https://sesisp.org.br" alt="Sesi Vôlei Bauru">
+                    <span class="team-name">Sesi Vôlei Bauru</span>
+                </div>
+                <div class="vs-circle">X</div>
+                <div class="team-box away">
+                    <!-- Placeholder de escudo padrão para o Osasco -->
+                    <img class="team-logo" src="https://wikipedia.org" alt="Osasco" onerror="this.src='https://placehold.co'">
+                    <span class="team-name">Osasco</span>
+                </div>
             </div>
             <div class="game-footer">
                 <span>🕒 21h30</span>
@@ -178,7 +224,7 @@
             </div>
         </div>
 
-        <!-- Estreia Superliga -->
+        <!-- Jogo 2 -->
         <div class="game-card">
             <div class="game-header">
                 <span>19/10 (Segunda)</span>
@@ -187,10 +233,16 @@
                     <span class="league-badge">Superliga - Rodada 1</span>
                 </div>
             </div>
-            <div class="game-teams">
-                <span>Sesi Vôlei Bauru</span>
-                <span class="vs">X</span>
-                <span>Batavo Mackenzie</span>
+            <div class="game-teams-container">
+                <div class="team-box home">
+                    <img class="team-logo" src="https://sesisp.org.br" alt="Sesi Vôlei Bauru">
+                    <span class="team-name">Sesi Vôlei Bauru</span>
+                </div>
+                <div class="vs-circle">X</div>
+                <div class="team-box away">
+                    <img class="team-logo" src="https://placehold.co" alt="Batavo Mackenzie">
+                    <span class="team-name">Batavo Mackenzie</span>
+                </div>
             </div>
             <div class="game-footer">
                 <span>🕒 18h30</span>
@@ -202,7 +254,7 @@
         <!-- VÔLEI MASCULINO -->
         <div class="section-title">Vôlei Masculino</div>
         
-        <!-- Estreia Superliga M -->
+        <!-- Jogo 3 -->
         <div class="game-card">
             <div class="game-header">
                 <span>28/10 (Quarta)</span>
@@ -211,10 +263,16 @@
                     <span class="league-badge">Superliga - Rodada 1</span>
                 </div>
             </div>
-            <div class="game-teams">
-                <span>Minas Tênis Clube</span>
-                <span class="vs">X</span>
-                <span>Sesi Bauru</span>
+            <div class="game-teams-container">
+                <div class="team-box home">
+                    <img class="team-logo" src="https://wikipedia.org" alt="Minas Tênis Clube" onerror="this.src='https://placehold.co'">
+                    <span class="team-name">Minas Tênis Clube</span>
+                </div>
+                <div class="vs-circle">X</div>
+                <div class="team-box away">
+                    <img class="team-logo" src="https://sesisp.org.br" alt="Sesi Bauru">
+                    <span class="team-name">Sesi Bauru</span>
+                </div>
             </div>
             <div class="game-footer">
                 <span>🕒 21h00</span>
@@ -222,7 +280,7 @@
             </div>
         </div>
 
-        <!-- Rodada 2 Superliga M -->
+        <!-- Jogo 4 -->
         <div class="game-card">
             <div class="game-header">
                 <span>02/11 (Segunda)</span>
@@ -230,10 +288,16 @@
                     <span class="league-badge">Superliga - Rodada 2</span>
                 </div>
             </div>
-            <div class="game-teams">
-                <span>Sesi Bauru</span>
-                <span class="vs">X</span>
-                <span>Praia Clube</span>
+            <div class="game-teams-container">
+                <div class="team-box home">
+                    <img class="team-logo" src="https://sesisp.org.br" alt="Sesi Bauru">
+                    <span class="team-name">Sesi Bauru</span>
+                </div>
+                <div class="vs-circle">X</div>
+                <div class="team-box away">
+                    <img class="team-logo" src="https://placehold.co" alt="Praia Clube">
+                    <span class="team-name">Praia Clube</span>
+                </div>
             </div>
             <div class="game-footer">
                 <span>🕒 18h30</span>
@@ -243,49 +307,3 @@
 
 
         <!-- BASQUETE MASCULINO -->
-        <div class="section-title">Basquete Masculino</div>
-        
-        <div class="game-card">
-            <div class="game-header">
-                <span>18/10 (Domingo)</span>
-                <div class="badges">
-                    <span class="league-badge">NBB - Estreia</span>
-                </div>
-            </div>
-            <div class="game-teams">
-                <span>Flamengo</span>
-                <span class="vs">X</span>
-                <span>Bauru Basket</span>
-            </div>
-            <div class="game-footer">
-                <span>🕒 11h00</span>
-                <span class="venue">📍 Maracanãzinho (RJ)</span>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-header">
-                <span>21/10 (Quarta)</span>
-                <div class="badges">
-                    <span class="league-badge">NBB - Rodada 2</span>
-                </div>
-            </div>
-            <div class="game-teams">
-                <span>Bauru Basket</span>
-                <span class="vs">X</span>
-                <span>São José</span>
-            </div>
-            <div class="game-footer">
-                <span>🕒 19h30</span>
-                <span class="venue">📍 Panela de Pressão (Bauru)</span>
-            </div>
-        </div>
-
-    </div>
-
-    <footer>
-        <p>Mantido por @acervosesibauru no X</p>
-    </footer>
-
-</body>
-</html>
