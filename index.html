@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Jogos - Acervo Sesi Bauru</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --primary-color: #cc0000;
+            --text-color: #ffffff;
+            --text-muted: #aaaaaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .profile-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .profile-handle {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 25px 0 15px 0;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .league-badge {
+            background-color: #333;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .game-teams {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .vs {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin: 0 10px;
+        }
+
+        .game-footer {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #2d2d2d;
+            padding-top: 8px;
+            margin-top: 4px;
+        }
+
+        .venue {
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="profile-title">Acervo Sesi Bauru</div>
+        <a href="https://x.com" target="_blank" class="profile-handle">@acervosesibauru</a>
+    </header>
+
+    <div class="container">
+        
+        <!-- VÔLEI FEMININO -->
+        <div class="section-title">Vôlei Feminino</div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span>HOJE</span>
+                <span class="league-badge">Paulista - Final (Jogo 2)</span>
+            </div>
+            <div class="game-teams">
+                <span>Sesi-Bauru</span>
+                <span class="vs">X</span>
+                <span>Osasco</span>
+            </div>
+            <div class="game-footer">
+                <span>🕒 21h30</span>
+                <span class="venue">📍 Arena Paulo Skaf</span>
+            </div>
+        </div>
+
+        <!-- BASQUETE MASCULINO -->
+        <div class="section-title">Basquete Masculino</div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span>18/10 (Domingo)</span>
+                <span class="league-badge">NBB - Estreia</span>
+            </div>
+            <div class="game-teams">
+                <span>Flamengo</span>
+                <span class="vs">X</span>
+                <span>Bauru Basket</span>
+            </div>
+            <div class="game-footer">
+                <span>🕒 11h00</span>
+                <span class="venue">📍 Maracanãzinho</span>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header">
+                <span>21/10 (Quarta)</span>
+                <span class="league-badge">NBB - Rodada 2</span>
+            </div>
+            <div class="game-teams">
+                <span>Bauru Basket</span>
+                <span class="vs">X</span>
+                <span>São José</span>
+            </div>
+            <div class="game-footer">
+                <span>🕒 19h30</span>
+                <span class="venue">📍 Panela de Pressão</span>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-header">
+                <span>23/10 (Sexta)</span>
+                <span class="league-badge">NBB - Rodada 3</span>
+            </div>
+            <div class="game-teams">
+                <span>Bauru Basket</span>
+                <span class="vs">X</span>
+                <span>Mogi</span>
+            </div>
+            <div class="game-footer">
+                <span>🕒 19h30</span>
+                <span class="venue">📍 Panela de Pressão</span>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Mantido por @acervosesibauru no X</p>
+    </footer>
+
+</body>
+</html>
